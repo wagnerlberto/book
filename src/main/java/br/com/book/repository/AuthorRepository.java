@@ -1,4 +1,4 @@
-package br.com.book2.repository;
+package br.com.book.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
