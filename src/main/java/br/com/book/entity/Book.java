@@ -9,14 +9,26 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 @Table(name="book")
 @Entity(name="book")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class Book {
 
   @Id
   @GeneratedValue(strategy=GenerationType.IDENTITY)
   private Long id;
   
+//  @NotBlank
   @Column(name="name")
   private String name;
   
@@ -24,8 +36,8 @@ public class Book {
   @JoinColumn(name="author_id")
   private Author author;
   
-  public Book(String name, Author author) {
-    this.name=name;
-    this.author=author;
-  }
+//  public Book(String name, Author author) {
+//    this.name=name;
+//    this.author=author;
+//  }
 }
